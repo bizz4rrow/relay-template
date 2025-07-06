@@ -5,7 +5,7 @@ import uvicorn
 app = FastAPI()
 clients = []
 
-@app.websocket("/")
+@app.websocket("/ws")
 async def relay(websocket: WebSocket):
     await websocket.accept()
     clients.append(websocket)
